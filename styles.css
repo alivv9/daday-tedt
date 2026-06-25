@@ -44,7 +44,7 @@ body {
   --color-accent-glow: hsla(150, 75%, 35%, 0.12);
   
   --color-gold: hsl(45, 75%, 50%);      /* Premium Accent Gold */
-  --color-gold-glow: hsla(45, 75%, 50%, 0.15);
+  --color-gold-glow: hsla(45, 60%, 52%, 0.15);
   
   --success: hsl(142, 72%, 29%);
   --error: hsl(354, 70%, 45%);
@@ -85,6 +85,7 @@ body.dark-mode {
   --color-accent-glow: hsla(150, 70%, 45%, 0.25);
   
   --color-gold: hsl(45, 80%, 58%);
+  --color-gold-glow: hsla(45, 80%, 58%, 0.2);
   
   --border-color: hsla(210, 20%, 95%, 0.08);
   --border-glass: rgba(255, 255, 255, 0.05);
@@ -246,6 +247,10 @@ body.dark-mode .brand-logo-frame {
   display: block;
 }
 
+@media (max-width: 992px) {
+  .desktop-nav { display: none; }
+}
+
 .nav-menu {
   display: flex;
   gap: clamp(15px, 2.5vw, 28px);
@@ -267,7 +272,7 @@ body.dark-mode .brand-logo-frame {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
+  right: 0;
   width: 0;
   height: 2.5px;
   background-color: var(--color-accent);
@@ -881,7 +886,7 @@ body.dark-mode .moon-icon {
 .price-badge-card {
   position: absolute;
   top: 30px;
-  left: 30px;
+  right: 30px;
   background-color: var(--color-gold);
   color: #ffffff;
   padding: 4px 12px;
@@ -1584,7 +1589,7 @@ body.dark-mode .moon-icon {
 
 .footer-links a:hover {
   color: var(--color-accent);
-  transform: translateX(-4px);
+  transform: translateX(4px);
 }
 
 .footer-contact-list {
@@ -1689,9 +1694,10 @@ body.dark-mode .moon-icon {
   border-radius: var(--radius-lg);
   max-width: 600px;
   width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
   box-shadow: var(--shadow-lg);
   position: relative;
-  overflow: hidden;
   transform: translateY(20px);
   transition: transform 0.3s ease;
 }
@@ -1703,7 +1709,7 @@ body.dark-mode .moon-icon {
 .close-modal-btn {
   position: absolute;
   top: 20px;
-  left: 20px;
+  right: 20px;
   background: none;
   border: 1px solid var(--border-color);
   width: 36px;
@@ -1766,7 +1772,8 @@ body.dark-mode .moon-icon {
 .toast-notification {
   position: fixed;
   bottom: 24px;
-  right: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
   background-color: var(--color-primary);
   color: #ffffff;
   padding: 16px 28px;
@@ -1776,7 +1783,6 @@ body.dark-mode .moon-icon {
   font-weight: 700;
   z-index: 3000;
   opacity: 0;
-  transform: translateY(10px);
   visibility: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1784,15 +1790,15 @@ body.dark-mode .moon-icon {
 .toast-notification.show {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateX(-50%) translateY(0);
 }
 
 /* --- Floating WhatsApp Button --- */
 .floating-whatsapp-btn {
   position: fixed;
   bottom: 30px;
-  left: 30px;
-  right: auto;
+  right: 30px;
+  left: auto;
   width: 58px;
   height: 58px;
   border-radius: 50%;
@@ -1835,8 +1841,8 @@ body.dark-mode .moon-icon {
 /* Floating Tooltip */
 .wa-floating-tooltip {
   position: absolute;
-  left: 70px;
-  right: auto;
+  right: 70px;
+  left: auto;
   background-color: var(--text-primary);
   color: var(--bg-primary);
   padding: 8px 16px;
@@ -1854,8 +1860,8 @@ body.dark-mode .moon-icon {
 .floating-whatsapp-btn:hover .wa-floating-tooltip {
   opacity: 1;
   visibility: visible;
-  left: 75px;
-  right: auto;
+  right: 75px;
+  left: auto;
 }
 
 @keyframes pulseWhatsApp {
@@ -1932,6 +1938,16 @@ body.dark-mode .moon-icon {
 .close-drawer-btn svg {
   width: 18px;
   height: 18px;
+}
+
+.drawer-phone-link {
+  display: flex;
+  margin-top: auto;
+  justify-content: center;
+}
+
+.drawer-brand-name {
+  font-size: 1.1rem;
 }
 
 .mobile-nav-menu {
@@ -2116,4 +2132,18 @@ body.dark-mode .moon-icon {
   .coordinate-copy-row {
     flex-wrap: wrap;
   }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
 }

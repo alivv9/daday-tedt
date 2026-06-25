@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- 1. بيانات المنتجات التفصيلية المحدثة للنافذة المنبثقة (Product Specs Database) ---
   const productDetails = {
     dishwash: {
-      title: "سائل غسيل الأواني (Dexan)",
+      title: "سائل غسيل الأواني (شركة وادي الكوف)",
       icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:50px;height:50px;color:var(--color-accent);"><rect x="20" y="8" width="24" height="48" rx="3" stroke="currentColor" stroke-width="3" fill="var(--color-primary-glow)"/><path d="M26 8V4M32 4H38" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="32" r="8" stroke="currentColor" stroke-width="2"/></svg>`,
       specs: [
         { label: "المادة الفعالة", value: "سلفونات صوديوم الكيل بنزين خطي عالية التركيز + معززات رغوة مرطبة." },
@@ -114,6 +114,8 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
     productModal.classList.add("active");
+    const modalScrollContainer = document.querySelector(".product-modal-content");
+    if (modalScrollContainer) modalScrollContainer.scrollTop = 0;
     document.body.style.overflow = "hidden"; // منع سكرول الخلفية
   }
 
@@ -156,6 +158,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
 
   function toggleMobileMenu(isOpen) {
+    if (menuToggle) {
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
     if (isOpen) {
       navOverlay.classList.add("active");
       document.body.style.overflow = "hidden";
@@ -238,6 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // فتح الرابط في علامة تبويب جديدة
     window.open(whatsappUrl, "_blank");
+    document.getElementById("order-form").reset();
   };
 
 
