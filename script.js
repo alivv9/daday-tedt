@@ -1,24 +1,35 @@
-// شركة وادي الكوف الجديد لصناعة المنظفات واستيراد مواد الخام
-// الملف البرمجي التفاعلي للموقع
+// شركة وادي الكوف الجديد للصناعات الكيماوية والمنظفات
+// الملف البرمجي التفاعلي للموقع المحدث
 
 document.addEventListener("DOMContentLoaded", () => {
   
-  // --- 1. بيانات المنتجات التفصيلية (Product Specifications Data) ---
+  // --- 1. بيانات المنتجات التفصيلية المحدثة للنافذة المنبثقة (Product Specs Database) ---
   const productDetails = {
     dishwash: {
       title: "سائل غسيل الأواني (Dexan)",
-      icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:50px;height:50px;"><rect x="20" y="8" width="24" height="48" rx="3" stroke="currentColor" stroke-width="3" fill="var(--color-accent-glow)"/><path d="M26 8V4M32 4H38" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="32" r="8" stroke="currentColor" stroke-width="2"/></svg>`,
+      icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:50px;height:50px;color:var(--color-accent);"><rect x="20" y="8" width="24" height="48" rx="3" stroke="currentColor" stroke-width="3" fill="var(--color-primary-glow)"/><path d="M26 8V4M32 4H38" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="32" r="8" stroke="currentColor" stroke-width="2"/></svg>`,
       specs: [
         { label: "المادة الفعالة", value: "سلفونات صوديوم الكيل بنزين خطي عالية التركيز + معززات رغوة مرطبة." },
         { label: "قوة إزالة الدهون", value: "فائقة (درجة ممتازة) - تفكيك فوري للزيوت والشحوم المستعصية." },
-        { label: "التعبئة المتوفرة", value: "عبوات سعة 1 لتر، وعبوات سعة 5 لتر، وجالونات اقتصادية سعة 10 لتر." },
+        { label: "التعبئة المتوفرة", value: "عبوات سعة 1 لتر، وعبوات سعة 5 لتر، وجالون اقتصادي **سعة 10 لتر (جديد شركة وادي 10)**." },
         { label: "طريقة الاستخدام", value: "توضع قطرات بسيطة على إسفنجة رطبة للحصول على رغوة غنية وتنظيف كامل للأواني والزجاج." },
         { label: "الأمان البشري", value: "يحتوي على مواد مرطبة للجلد ومثبتات درجة الحموضة (pH 7.2) الصديقة للبشرة." }
       ]
     },
+    wadi10: {
+      title: "عبوة جديد شركة وادي 10 (سعة 10 لتر)",
+      icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:50px;height:50px;color:var(--color-accent);"><rect x="22" y="10" width="20" height="44" rx="4" stroke="currentColor" stroke-width="3" fill="var(--color-primary-glow)"/><path d="M27 10V6M37 10V6M30 6H34" stroke="currentColor" stroke-width="2"/><circle cx="32" cy="32" r="6" stroke="currentColor" stroke-width="2"/></svg>`,
+      specs: [
+        { label: "اسم المنتج وحجمه", value: "عبوة **جديد شركة وادي 10** سعة 10 لتر." },
+        { label: "الاستخدام المستهدف", value: "تنظيف الأواني والأطباق للفنادق، المطاعم، والمنازل ذات الاستهلاك العالي." },
+        { label: "كفاءة العبوة", value: "توفير اقتصادي كبير جداً بتركيبة مركزة للغاية تدوم طويلاً وتمنع الهدر." },
+        { label: "قوة الرغوة", value: "رغوة كثيفة مستقرة مع عطر الليمون الأخضر الطبيعي المنعش والمقوي للنظافة." },
+        { label: "معايير الإنتاج", value: "مصنع محلياً بالمنطقة الصناعية في المرج وفق أفضل ضوابط معملية كيميائية متزنة." }
+      ]
+    },
     laundry: {
       title: "سائل غسيل الملابس العميق",
-      icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:50px;height:50px;"><path d="M12 24V50C12 52.2 13.8 54 16 54H48C50.2 54 52 52.2 52 50V24" stroke="currentColor" stroke-width="3"/><path d="M16 16C16 13.8 17.8 12 20 12H44C46.2 12 48 13.8 48 16V24H16V16Z" fill="var(--color-accent-glow)" stroke="currentColor" stroke-width="3"/><circle cx="32" cy="38" r="8" stroke="currentColor" stroke-width="2"/></svg>`,
+      icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:50px;height:50px;color:var(--color-accent);"><path d="M12 24V50C12 52.2 13.8 54 16 54H48C50.2 54 52 52.2 52 50V24" stroke="currentColor" stroke-width="3"/><path d="M16 16C16 13.8 17.8 12 20 12H44C46.2 12 48 13.8 48 16V24H16V16Z" fill="var(--color-primary-glow)" stroke="currentColor" stroke-width="3"/><circle cx="32" cy="38" r="8" stroke="currentColor" stroke-width="2"/></svg>`,
       specs: [
         { label: "المادة الفعالة", value: "أنزيمات حيوية نشطة + مواد خافضة للتوتر السطحي غير أيونية متوافقة مع الأنسجة." },
         { label: "أبرز الميزات", value: "إزالة عميقة للبقع المستعصية (حبر، دهون، دم) مع حماية ألوان الأقمشة من البهتان." },
@@ -27,31 +38,31 @@ document.addEventListener("DOMContentLoaded", () => {
         { label: "إرشادات الغسيل", value: "مناسب للغسالات الأوتوماتيكية بالكامل والغسالات العادية. يضاف مقدار غطاء واحد (100 مل) لكل وجبة غسيل متوسطة." }
       ]
     },
+    bumble: {
+      title: "منتج الملابس Bumble الفاخر",
+      icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:50px;height:50px;color:var(--color-gold);"><path d="M32 6L54 20V44L32 58L10 44V20L32 6Z" fill="var(--color-primary-glow)" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><circle cx="32" cy="32" r="10" stroke="var(--color-gold)" stroke-width="3"/></svg>`,
+      specs: [
+        { label: "اسم الموديل والتصنيف", value: "سائل غسيل الملابس المتميز **Bumble**." },
+        { label: "سعر المنتج", value: "**100 دينار ليبي** للعبوة الفاخرة." },
+        { label: "التركيز والتعقيم", value: "تركيز فائق جداً (Premium-Grade) يحتوي على معقمات طبية آمنة للملابس وحماية الألوان." },
+        { label: "العطر الخاص", value: "عطر زيتي فرنسي مركز يدوم لعدة أيام في أنسجة الملابس بعد الغسيل." },
+        { label: "الأقمشة الموصى بها", value: "مناسب لكافة أنواع الأقمشة الفاخرة، العباءات، الملابس الصوفية، والمفروشات الراقية." }
+      ]
+    },
     multipurpose: {
       title: "سائل متعدد الأغراض ومطهر الأسطح",
-      icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:50px;height:50px;"><path d="M28 20H40L38 12H30L28 20Z" stroke="currentColor" stroke-width="2"/><path d="M22 28V54C22 56.2 23.8 58 26 58H38C40.2 58 42 56.2 42 54V28" fill="var(--color-accent-glow)" stroke="currentColor" stroke-width="3"/></svg>`,
+      icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:50px;height:50px;color:var(--color-accent);"><path d="M28 20H40L38 12H30L28 20Z" stroke="currentColor" stroke-width="2"/><path d="M22 28V54C22 56.2 23.8 58 26 58H38C40.2 58 42 56.2 42 54V28" fill="var(--color-primary-glow)" stroke="currentColor" stroke-width="3"/></svg>`,
       specs: [
         { label: "المادة الفعالة", value: "كحول إيزوبروبيلي + كلوريد البنزالكونيوم + عوامل تلميع النانو المتطورة." },
-        { label: "الاستخدامات الشائعة", value: "تنظيف وتلميع البلاط، الرخام، الزجاج، الأجهزة الإلكترونية الخارجية، والأرضيات الصلبة." },
+        { label: "الاستخدامات الشائعة", value: "تنظيف وتلميع البلاط، الرخام، الزجاج، الأرضيات الصلبة، وتعقيم الطاولات والمقابض." },
         { label: "قوة إزالة الأوساخ", value: "تفكيك الغبار، البصمات، والدهون الخفيفة بمسحة واحدة دون الحاجة للشطف بالماء." },
         { label: "التعبئة المتوفرة", value: "بخاخ جاهز للاستخدام سعة 750 مل، وجالون اقتصادي للتعبئة سعة 5 لتر." },
         { label: "تعليمات الأمان", value: "يحفظ بعيداً عن متناول الأطفال. غير مخصص للاستخدام على الأواني الغذائية المباشرة." }
       ]
     },
-    disinfectants: {
-      title: "المطهرات والمعطرات المركزة",
-      icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:50px;height:50px;"><path d="M32 8L48 14V30C48 42 38 52 32 56C26 52 16 42 16 30V14L32 8Z" fill="var(--color-accent-glow)" stroke="currentColor" stroke-width="3"/></svg>`,
-      specs: [
-        { label: "نسبة التعقيم", value: "يقضي على 99.9% من البكتيريا والجراثيم والفطريات الضارة المسببة للأمراض." },
-        { label: "المادة الفعالة", value: "الصنوبر النقي المعدل + كلوريد الأمونيوم الرباعي كمطهر معقم واسع المدى." },
-        { label: "الروائح والتعطير", value: "روائح طبيعية منعشة ومركزة (الصنوبر، العود الفاخر، النعناع) تدوم لأكثر من 24 ساعة." },
-        { label: "مجالات التطبيق", value: "تعقيم الأرضيات، الحمامات، الممرات والمرافق الصحية العامة والمنزلية." },
-        { label: "طريقة الاستخدام", value: "يخفف بمعدل 50 مل (نصف كوب) لكل 5 لتر من الماء النظيف للمسح اليومي." }
-      ]
-    },
     clorox: {
       title: "مادة الكلوركس (المبيض والمعقم القوي)",
-      icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:50px;height:50px;"><circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="var(--color-accent-glow)"/></svg>`,
+      icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:50px;height:50px;color:var(--color-accent);"><circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3" fill="var(--color-primary-glow)"/></svg>`,
       specs: [
         { label: "التركيز الكيميائي", value: "هيبوكلوريت الصوديوم بتركيز نشط ودقيق يتراوح بين 5.25% إلى 6%." },
         { label: "الفعالية الرئيسية", value: "تبييض فائق للمنسوجات القطنية البيضاء + إبادة بيولوجية تامة للفيروسات والميكروبات على الأسطح." },
@@ -60,15 +71,15 @@ document.addEventListener("DOMContentLoaded", () => {
         { label: "⚠️ تحذيرات هامة جداً", value: "يجب استخدامه في مكان جيد التهوية. لا يخلط أبداً مع الفلاش أو الأحماض لتفادي انبعاث غاز الكلور السام. تجنب ملامسة العين والجلد بشكل مباشر." }
       ]
     },
-    potash: {
-      title: "مادة البوتاس (هيدروكسيد البوتاسيوم المطور)",
-      icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:50px;height:50px;"><path d="M32 8L48 14V30C48 42 38 52 32 56C26 52 16 42 16 30V14L32 8Z" fill="var(--color-accent-glow)" stroke="currentColor" stroke-width="3"/></svg>`,
+    garik: {
+      title: "المنتج النجمي: \"جارق\" (حارق الروائح الكريهة)",
+      icon: `<svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:50px;height:50px;color:var(--color-gold);"><path d="M32 8L48 14V30C48 42 38 52 32 56C26 52 16 42 16 30V14L32 8Z" fill="var(--color-primary-glow)" stroke="currentColor" stroke-width="3"/></svg>`,
       specs: [
-        { label: "التركيب الكيميائي", value: "هيدروكسيد البوتاسيوم المركّز الصرف (Potassium Hydroxide)." },
-        { label: "الاستخدامات الصناعية والتعقيم", value: "تفتيت الدهون العضوية والزيوت الصلبة بالبالوعات ومجاري الصرف، وتعقيم الأسطح الخرسانية والمصانع من المخلفات الجرثومية المتراكمة." },
-        { label: "إزالة الروائح الكريهة", value: "يقضي على مصدر الروائح الكريهة مباشرة عبر تفكيك المادة العضوية المسببة لها." },
-        { label: "التعبئة المتوفرة", value: "عبوات بتركيز معملي دقيق خاضع للفحص مع غطاء أمان ضد عبث الأطفال." },
-        { label: "⚠️ تحذيرات السلامة المهنية", value: "مادة كاوية شديدة القلوية. يجب ارتداء قفازات ونظارة حماية عند الاستخدام. في حال ملامسة الجلد، يغسل فوراً بماء بارد وفير ثم يوضع الخل المخفف أو عصير الليمون لمعادلة القلوية." }
+        { label: "اسم المنتج التجاري", value: "**جارق** (منظف ومطهر معقم واسع المدى)." },
+        { label: "إزالة الروائح الكريهة", value: "يقضي تماماً على مصدر الروائح المزعجة والكريهة في بالوعات الصرف والمطابخ والمجاري المائية." },
+        { label: "تفتيت الدهون والتسليك", value: "إزالة تامة للشحوم والترسبات العضوية الملتصقة بأنابيب الصرف بكفاءة تفتيت معملية فورية." },
+        { label: "قوة إبادة الجراثيم", value: "إبادة تامة للبيئة الحاضنة للجراثيم والفطريات الضارة التي تنمو في المناطق الرطبة والمظلمة." },
+        { label: "⚠️ تحذيرات أمان كيميائي", value: "يحتوي على مواد قلوية نشطة. يجب ارتداء قفازات ونظارة حماية أثناء الصب والاستخدام. يصب ببطء لتجنب التطاير، ويحفظ تماماً بعيداً عن متناول الأطفال." }
       ]
     }
   };
@@ -82,7 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const data = productDetails[productId];
     if (!data) return;
 
-    // بناء كود HTML لعرضه داخل النافذة
     let specsHtml = "";
     data.specs.forEach(item => {
       specsHtml += `
@@ -101,180 +111,171 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="modal-body-specs">
         ${specsHtml}
       </div>
-      <div style="margin-top: 30px; display: flex; justify-content: flex-end;">
-        <a href="#orders" class="btn btn-primary" onclick="selectProductFromModal('${data.title}')" style="width: 100%;">
-          طلب عينة من هذا المنتج
-        </a>
-      </div>
     `;
 
     productModal.classList.add("active");
-    document.body.style.overflow = "hidden"; // منع سكرول الصفحة خلف المودال
+    document.body.style.overflow = "hidden"; // منع سكرول الخلفية
   }
 
   function closeModal() {
     productModal.classList.remove("active");
-    document.body.style.overflow = ""; // إعادة تفعيل سكرول الصفحة
+    document.body.style.overflow = ""; // استعادة سكرول الخلفية
   }
 
-  // ربط الأزرار بالمودال
+  // مستمعو الأحداث للمودال
   document.querySelectorAll(".open-product-modal").forEach(button => {
-    button.addEventListener("click", () => {
-      const productId = button.getAttribute("data-product");
-      openModal(productId);
+    button.addEventListener("click", (e) => {
+      const prodId = button.getAttribute("data-product");
+      openModal(prodId);
     });
   });
 
-  closeModalBtn.addEventListener("click", closeModal);
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener("click", closeModal);
+  }
 
-  // إغلاق المودال بالضغط على الخلفية
-  productModal.addEventListener("click", (e) => {
-    if (e.target === productModal) {
-      closeModal();
-    }
-  });
+  if (productModal) {
+    productModal.addEventListener("click", (e) => {
+      if (e.target === productModal) {
+        closeModal();
+      }
+    });
+  }
 
   // إغلاق المودال بزر Escape
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && productModal.classList.contains("active")) {
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
       closeModal();
     }
   });
 
-  // زر الطلب السريع من داخل المودال
-  window.selectProductFromModal = function(productTitle) {
-    closeModal();
-    // تحديد المنتج في القائمة المنسدلة للنموذج
-    const selectElem = document.getElementById("order-product");
-    
-    // البحث عن الخيار المطابق جزئياً
-    for (let i = 0; i < selectElem.options.length; i++) {
-      if (productTitle.includes("ديكسان") && selectElem.options[i].value.includes("ديكسان")) {
-        selectElem.selectedIndex = i;
-        break;
-      } else if (productTitle.includes("الملابس") && selectElem.options[i].value.includes("الملابس")) {
-        selectElem.selectedIndex = i;
-        break;
-      } else if (productTitle.includes("الأغراض") && selectElem.options[i].value.includes("الأغراض")) {
-        selectElem.selectedIndex = i;
-        break;
-      } else if (productTitle.includes("المطهرات") && selectElem.options[i].value.includes("المطهرات")) {
-        selectElem.selectedIndex = i;
-        break;
-      } else if (productTitle.includes("الكلوركس") && selectElem.options[i].value.includes("الكلوركس")) {
-        selectElem.selectedIndex = i;
-        break;
-      } else if (productTitle.includes("البوتاس") && selectElem.options[i].value.includes("البوتاس")) {
-        selectElem.selectedIndex = i;
-        break;
-      }
-    }
-  };
+  // --- 3. التحكم في القائمة المنزلقة للجوال (Mobile Hamburger Drawer) ---
+  const menuToggle = document.getElementById("menu-toggle");
+  const closeDrawer = document.getElementById("close-drawer");
+  const navOverlay = document.getElementById("nav-overlay");
+  const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
 
-
-  // --- 3. إدارة التبويبات ونوع الطلب (Order Tabs Logic) ---
-  const tabSample = document.getElementById("tab-sample");
-  const tabPurchase = document.getElementById("tab-purchase");
-  const orderTypeVal = document.getElementById("order-type-val");
-
-  window.setOrderType = function(type) {
-    if (type === "sample") {
-      tabSample.classList.add("active");
-      tabPurchase.classList.remove("active");
-      orderTypeVal.value = "طلب عينة مجانية";
+  function toggleMobileMenu(isOpen) {
+    if (isOpen) {
+      navOverlay.classList.add("active");
+      document.body.style.overflow = "hidden";
     } else {
-      tabPurchase.classList.add("active");
-      tabSample.classList.remove("active");
-      orderTypeVal.value = "طلب شراء بالجملة";
+      navOverlay.classList.remove("active");
+      document.body.style.overflow = "";
     }
-  };
+  }
 
-  // ربط زر الهيرو "طلب عينة مجانية" لينتقل لتبويب عينة
-  const heroSampleBtn = document.getElementById("hero-sample-btn");
-  if (heroSampleBtn) {
-    heroSampleBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      setOrderType("sample");
-      document.getElementById("orders").scrollIntoView({ behavior: "smooth" });
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => toggleMobileMenu(true));
+  }
+
+  if (closeDrawer) {
+    closeDrawer.addEventListener("click", () => toggleMobileMenu(false));
+  }
+
+  if (navOverlay) {
+    navOverlay.addEventListener("click", (e) => {
+      if (e.target === navOverlay) {
+        toggleMobileMenu(false);
+      }
     });
   }
 
+  mobileNavLinks.forEach(link => {
+    link.addEventListener("click", () => toggleMobileMenu(false));
+  });
 
-  // --- 4. إرسال نموذج الطلب لواتساب (Form Submission Handler) ---
+
+  // --- 4. معالجة وتدفق نموذج الطلبيات (Form Handling & WhatsApp Integration) ---
+  const orderTypeVal = document.getElementById("order-type-val");
+  const tabSample = document.getElementById("tab-sample");
+  const tabPurchase = document.getElementById("tab-purchase");
+
+  // دالة تبديل نوع الطلب
+  window.setOrderType = function(type) {
+    if (type === "sample") {
+      orderTypeVal.value = "طلب عينة مجانية";
+      tabSample.classList.add("active");
+      tabPurchase.classList.remove("active");
+    } else {
+      orderTypeVal.value = "طلب شراء بالجملة";
+      tabPurchase.classList.add("active");
+      tabSample.classList.remove("active");
+    }
+  };
+
   window.handleFormSubmit = function(event) {
     event.preventDefault();
 
+    const orderType = orderTypeVal.value;
     const name = document.getElementById("order-name").value.trim();
     const phone = document.getElementById("order-phone").value.trim();
     const city = document.getElementById("order-city").value.trim();
     const product = document.getElementById("order-product").value;
     const notes = document.getElementById("order-notes").value.trim();
-    const orderType = orderTypeVal.value;
 
-    if (!product) {
-      alert("الرجاء اختيار المنتج المطلوب.");
+    // التحقق من صحة المدخلات الأساسية
+    if (!name || !phone || !city || !product) {
+      alert("يرجى ملء جميع الحقول المطلوبة المميزة بنجمة (*)");
       return;
     }
 
-    // صياغة رسالة واتساب أنيقة ومنسقة
-    const whatsappMsg = `السلام عليكم شركة وادي الكوف الجديد، أود تقديم طلب من موقعكم الإلكتروني:
-----------------------------------------
-📌 *نوع الطلب:* ${orderType}
-👤 *الاسم / الجهة:* ${name}
-📞 *رقم الهاتف:* ${phone}
-📍 *المدينة والمنطقة:* ${city}
-🧪 *المنتج المطلوب:* ${product}
-📝 *ملاحظات إضافية:* ${notes || 'لا يوجد ملاحظات إضافية'}
-----------------------------------------
-تم الإرسال عبر صفحة الهبوط الرسمية.`;
+    // بناء قالب رسالة الواتساب المنسق
+    let message = `*طلب جديد من موقع شركة وادي الكوف الجديد للمنظفات* \n\n`;
+    message += `*نوع الطلب:* ${orderType}\n`;
+    message += `*الاسم/النشاط:* ${name}\n`;
+    message += `*رقم الهاتف:* ${phone}\n`;
+    message += `*المنطقة/المدينة:* ${city}\n`;
+    message += `*المنتج المطلوب:* ${product}\n`;
+    if (notes) {
+      message += `*ملاحظات إضافية:* ${notes}\n`;
+    }
+    message += `\n_تم إرسال هذا الطلب تلقائياً من الموقع الإلكتروني للمصنع._`;
 
-    // رقم هاتف واتساب الخاص بالشركة: 0924606780 (الدولي: 218924606780)
-    const companyPhone = "218924606780";
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=${companyPhone}&text=${encodeURIComponent(whatsappMsg)}`;
+    // ترميز الرسالة للرابط
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/218924606780?text=${encodedMessage}`;
 
-    // فتح رابط واتساب في نافذة جديدة
+    // فتح الرابط في علامة تبويب جديدة
     window.open(whatsappUrl, "_blank");
-
-    // تفريغ المدخلات بعد الإرسال بنجاح
-    document.getElementById("order-form").reset();
   };
 
 
-  // --- 5. نسخ إحداثيات الخريطة (Copy Coordinates Feature) ---
+  // --- 5. نسخ إحداثيات خرائط جوجل مع إشعار التأكيد (Copy Coordinates & Toast) ---
   const copyBtn = document.getElementById("btn-copy-coords");
-  const coordinateText = document.getElementById("coordinate-text");
-  const copyTooltip = document.getElementById("copy-tooltip");
+  const coordText = document.getElementById("coordinate-text");
   const toastNotify = document.getElementById("toast-notify");
+  const tooltipText = document.getElementById("copy-tooltip");
 
-  if (copyBtn && coordinateText) {
+  if (copyBtn && coordText) {
     copyBtn.addEventListener("click", () => {
-      const textToCopy = coordinateText.textContent;
+      const textToCopy = coordText.innerText;
       
       navigator.clipboard.writeText(textToCopy).then(() => {
-        // تحديث التلميح الفوري
-        copyTooltip.textContent = "تم النسخ!";
-        
-        // إظهار إشعار التوست السفلي
+        // إظهار إشعار Toast
         toastNotify.classList.add("show");
         
-        // إعادة التلميح لحالته الطبيعية بعد ثانيتين
+        // تغيير نص التلميحة مؤقتاً
+        if (tooltipText) tooltipText.innerText = "تم النسخ!";
+        
+        // إخفاء إشعار Toast بعد 3 ثوانٍ
         setTimeout(() => {
-          copyTooltip.textContent = "نسخ الإحداثيات";
           toastNotify.classList.remove("show");
-        }, 2000);
+          if (tooltipText) tooltipText.innerText = "نسخ الإحداثيات";
+        }, 3000);
       }).catch(err => {
-        console.error("فشل نسخ النص: ", err);
+        console.error("فشل نسخ الإحداثيات: ", err);
       });
     });
   }
 
 
-  // --- 6. تشغيل الوضع المظلم / المضيء (Theme Switcher Logic) ---
+  // --- 6. ميزة الوضع الليلي وحفظ التفضيل (Dark/Light Mode Theme Toggle) ---
   const themeToggle = document.getElementById("theme-toggle");
   
   // التحقق من التفضيل المخزن مسبقاً
-  const currentTheme = localStorage.getItem("theme");
-  if (currentTheme === "dark") {
+  const savedTheme = localStorage.getItem("site-theme");
+  if (savedTheme === "dark") {
     document.body.classList.add("dark-mode");
     document.body.classList.remove("light-theme");
   } else {
@@ -282,68 +283,37 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.remove("dark-mode");
   }
 
-  themeToggle.addEventListener("click", () => {
-    if (document.body.classList.contains("dark-mode")) {
-      document.body.classList.remove("dark-mode");
-      document.body.classList.add("light-theme");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.body.classList.remove("light-theme");
-      document.body.classList.add("dark-mode");
-      localStorage.setItem("theme", "dark");
-    }
-  });
-
-
-  // --- 7. قائمة الجوال والتحكم بها (Mobile Drawer Navigation) ---
-  const menuToggle = document.getElementById("menu-toggle");
-  const closeDrawer = document.getElementById("close-drawer");
-  const navOverlay = document.getElementById("nav-overlay");
-
-  const toggleDrawer = () => {
-    navOverlay.classList.toggle("active");
-  };
-
-  if (menuToggle && closeDrawer && navOverlay) {
-    menuToggle.addEventListener("click", toggleDrawer);
-    closeDrawer.addEventListener("click", toggleDrawer);
-
-    // إغلاق القائمة عند النقر على الخلفية الشفافة
-    navOverlay.addEventListener("click", (e) => {
-      if (e.target === navOverlay) {
-        toggleDrawer();
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      if (document.body.classList.contains("dark-mode")) {
+        document.body.classList.remove("dark-mode");
+        document.body.classList.add("light-theme");
+        localStorage.setItem("site-theme", "light");
+      } else {
+        document.body.classList.remove("light-theme");
+        document.body.classList.add("dark-mode");
+        localStorage.setItem("site-theme", "dark");
       }
-    });
-
-    // إغلاق القائمة عند النقر على أي من الروابط
-    document.querySelectorAll(".mobile-nav-link").forEach(link => {
-      link.addEventListener("click", () => {
-        toggleDrawer();
-      });
     });
   }
 
-  // --- 8. تحديث تبويب القائمة النشط عند سكرول الصفحة (Active Nav Link on Scroll) ---
-  const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".desktop-nav .nav-link");
-
+  // --- 7. التمرير وسلاسل الحركات البسيطة ونوافذ التمرير النشطة ---
+  // وظيفة تمييز رابط التنقل الفعال عند السكرول
+  const sections = document.querySelectorAll("section[id], header[id]");
   window.addEventListener("scroll", () => {
-    let currentId = "";
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (window.scrollY >= (sectionTop - 120)) {
-        currentId = section.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      const href = link.getAttribute("href");
-      if (href === "#" && currentId === "home") {
-        link.classList.add("active");
-      } else if (href === `#${currentId}`) {
-        link.classList.add("active");
+    let scrollY = window.pageYOffset;
+    
+    sections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 100;
+      const sectionId = current.getAttribute("id");
+      
+      const desktopLink = document.querySelector(`.desktop-nav a[href*=${sectionId}]`);
+      if (desktopLink) {
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          document.querySelectorAll(".nav-link").forEach(el => el.classList.remove("active"));
+          desktopLink.classList.add("active");
+        }
       }
     });
   });
