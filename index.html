@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="صرافة وادي الكوف بمدينة المرج - ليبيا. خدمات تحويل الأموال وصرف العملات بأسعار منافسة وسرعة فائقة. مؤسستكم المالية المحلية الموثوقة والمرخصة من مصرف ليبيا المركزي.">
-  <title>صرافة وادي الكوف | شريكك المالي الموثوق بالمرج</title>
+  <meta name="description" content="شركة وادي الكوف الجديد لصناعة المنظفات واستيراد مواد الخام بالمرج - ليبيا. نقدم منظفات ومعقمات آمنة وفعالة ذات جودة صناعية عالية ونستورد أفضل المواد الخام عالمياً لتلبية احتياجاتكم.">
+  <title>شركة وادي الكوف الجديد | منظفات ذات قوة صناعية ونظافة عميقة</title>
   
   <!-- Preload fonts to avoid flashing -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css">
@@ -20,47 +21,51 @@
     <div class="container header-container">
       
       <!-- Brand / Logo -->
-      <a href="#" class="brand" aria-label="الرئيسية">
-        <!-- SVG Logo: Hills and valley lines with currency exchange flow -->
-        <svg class="logo-icon" viewBox="0 0 48 48">
-          <path d="M6 34C14 34 10 14 24 14C38 14 34 34 42 34" stroke="var(--color-primary)" />
-          <path d="M12 38C18 38 16 22 24 22C32 22 30 38 36 38" stroke="var(--color-accent)" />
-          <circle cx="24" cy="18" r="3" fill="var(--color-primary)" />
-        </svg>
+      <a href="#" class="brand" aria-label="الرئيسية" id="logo-link">
+        <div class="brand-logo-frame">
+          <img src="assets/logo.png" alt="شعار مصانع وادي الكوف الجديد ديكسان" class="logo-img-real">
+        </div>
         <div class="brand-text">
-          <span class="brand-name">صرافة وادي الكوف</span>
-          <span class="brand-subtitle">مدينة المرج - ليبيا</span>
+          <span class="brand-name">وادي الكوف الجديد</span>
+          <span class="brand-subtitle">لصناعة المنظفات واستيراد مواد الخام</span>
         </div>
       </a>
 
       <!-- Navigation Menu (Desktop) -->
-      <nav aria-label="القائمة الرئيسية">
+      <nav aria-label="القائمة الرئيسية" class="desktop-nav">
         <ul class="nav-menu">
-          <li><a href="#" class="nav-link">الرئيسية</a></li>
-          <li><a href="#rates-converter" class="nav-link">أسعار العملات</a></li>
-          <li><a href="#rates-converter" class="nav-link">حاسبة التحويل</a></li>
-          <li><a href="#contact-us" class="nav-link">اتصل بنا</a></li>
+          <li><a href="#" class="nav-link active">الرئيسية</a></li>
+          <li><a href="#about" class="nav-link">عن الشركة</a></li>
+          <li><a href="#products" class="nav-link">منتجاتنا</a></li>
+          <li><a href="#orders" class="nav-link">الطلبات</a></li>
+          <li><a href="#contact" class="nav-link">اتصل بنا</a></li>
         </ul>
       </nav>
 
-      <!-- Header Utilities -->
+      <!-- Header Actions -->
       <div class="header-actions">
+        <!-- WhatsApp Header Link -->
+        <a href="https://wa.me/218924606780" target="_blank" rel="noopener noreferrer" class="whatsapp-header-link" aria-label="واتساب">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.717-1.464L0 24zm6.59-4.846c1.6.95 3.197 1.451 4.886 1.451 5.393 0 9.778-4.383 9.781-9.774 0-2.612-1.017-5.07-2.868-6.923C16.594 2.054 14.132 1.034 11.521 1.03c-5.405 0-9.79 4.385-9.793 9.777-.001 1.77.474 3.498 1.378 5.01L2.122 21.9l6.525-1.746z"/>
+          </svg>
+        </a>
         <!-- Connected Hot Line -->
-        <a href="tel:+21892555555" class="phone-link" id="header-phone">
-          <svg viewBox="0 0 24 24">
+        <a href="tel:0924606780" class="phone-link" id="header-phone" aria-label="اتصل بنا">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
           </svg>
-          <span class="latin-num">+218 92 555 5555</span>
+          <span class="latin-num">0924606780</span>
         </a>
 
         <!-- Dark/Light Theme Button -->
         <button class="theme-toggle-btn" id="theme-toggle" aria-label="تبديل مظهر الموقع">
           <!-- Moon Icon -->
-          <svg class="moon-icon" viewBox="0 0 24 24">
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
           </svg>
           <!-- Sun Icon -->
-          <svg class="sun-icon" viewBox="0 0 24 24">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -75,7 +80,7 @@
 
         <!-- Menu Toggle Button (Mobile) -->
         <button class="menu-toggle" id="menu-toggle" aria-label="فتح قائمة التنقل">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12"></line>
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -90,9 +95,9 @@
   <div class="mobile-nav-overlay" id="nav-overlay">
     <div class="mobile-nav-drawer" id="nav-drawer">
       <div class="drawer-header">
-        <span class="brand-name" style="font-size: 1.2rem;">صرافة وادي الكوف</span>
+        <span class="brand-name" style="font-size: 1.1rem;">وادي الكوف الجديد</span>
         <button class="close-drawer-btn" id="close-drawer" aria-label="إغلاق قائمة التنقل">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
           </svg>
@@ -100,295 +105,475 @@
       </div>
       <ul class="mobile-nav-menu">
         <li><a href="#" class="mobile-nav-link">الرئيسية</a></li>
-        <li><a href="#rates-converter" class="mobile-nav-link">أسعار العملات</a></li>
-        <li><a href="#rates-converter" class="mobile-nav-link">حاسبة التحويل</a></li>
-        <li><a href="#contact-us" class="mobile-nav-link">اتصل بنا</a></li>
+        <li><a href="#about" class="mobile-nav-link">عن الشركة</a></li>
+        <li><a href="#products" class="mobile-nav-link">منتجاتنا</a></li>
+        <li><a href="#orders" class="mobile-nav-link">الطلبات</a></li>
+        <li><a href="#contact" class="mobile-nav-link">اتصل بنا</a></li>
       </ul>
-      <a href="tel:+21892555555" class="phone-link" style="display: flex; margin-top: auto;">
-        <svg viewBox="0 0 24 24">
+      <a href="tel:0924606780" class="phone-link" style="display: flex; margin-top: auto; justify-content: center;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
         </svg>
-        <span class="latin-num">+218 92 555 5555</span>
+        <span class="latin-num">0924606780</span>
       </a>
     </div>
   </div>
 
   <!-- Hero Section -->
   <section class="hero" id="home">
-    <div class="container hero-content animate-fade-in-up">
-      <div class="hero-tag">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-        </svg>
-        <span>صرافة وادي الكوف - شريكك الموثوق في المرج لتحويلاتك المالية الآمنة</span>
+    <div class="container hero-grid-layout">
+      <!-- Text content -->
+      <div class="hero-content animate-fade-in-up">
+        <div class="hero-tag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span>صناعة محلية بمواصفات عالمية موثوقة</span>
+        </div>
+        <h1 class="hero-title">وادي الكوف الجديد.. <span>شريكك الموثوق</span> في حلول النظافة والتعقيم المتكاملة</h1>
+        <p class="hero-desc">
+          نصنع لكم منظفات ومعقمات آمنة وفعالة، بالاعتماد على أفضل المواد الخام المستوردة عالمياً. جودة تضمن النظافة العميقة والتعقيم الطبي المثالي لمختلف الاستخدامات الصناعية والمنزلية.
+        </p>
+        <div class="hero-buttons">
+          <a href="#products" class="btn btn-primary">تصفح منتجاتنا</a>
+          <a href="#orders" class="btn btn-secondary" id="hero-sample-btn">طلب عينة مجانية</a>
+        </div>
       </div>
-      <h1 class="hero-title">الريادة والاستقرار في <span>عالم المال</span></h1>
-      <p class="hero-desc">
-        مؤسسة وطنية محلية جذورها عميقة في مدينة المرج، نقدم حلول صرف العملات الأجنبية والحوالات المالية بأقصى درجات الثقة والأمان.
-      </p>
-      <div class="hero-buttons">
-        <a href="#rates-converter" class="btn btn-primary">عرض الأسعار المباشرة</a>
+      <!-- Hero Image Card -->
+      <div class="hero-image-container animate-fade-in-up" style="animation-delay: 200ms;">
+        <div class="elegant-image-border">
+          <img src="assets/product-group.jpg" alt="خط إنتاج منظفات وادي الكوف الجديد ومجموعة المنتجات" class="hero-img">
+          <div class="hero-badge">
+            <span class="badge-title">جودة معتمدة</span>
+            <span class="badge-sub">100% مواد خام ممتازة</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Exchange Rates & Converter Section -->
-  <section class="container" id="rates-converter">
-    <div class="exchange-grid">
-      
-      <!-- Live Currency Rates Board -->
-      <article class="panel animate-fade-in-up" style="animation-delay: 150ms;">
-        <div class="panel-title">
-          <h3>أسعار الصرف المباشرة</h3>
-          <span>تحديث تلقائي لحظي</span>
-        </div>
-        <div class="table-responsive">
-          <table class="rates-table" id="rates-table">
-            <thead>
-              <tr>
-                <th>العملة</th>
-                <th>سعر الشراء</th>
-                <th>سعر البيع</th>
-                <th>المؤشر والنسبة</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="currency-cell">
-                    <img class="flag" src="https://flagcdn.com/w40/us.png" alt="علم الولايات المتحدة">
-                    <div class="curr-info">
-                      <span class="curr-code">USD</span>
-                      <span class="curr-name">دولار أمريكي</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="latin-num">6.80</span> د.ل</td>
-                <td><span class="latin-num">6.85</span> د.ل</td>
-                <td>
-                  <span class="rate-trend trend-up">
-                    <svg class="trend-icon" viewBox="0 0 24 24">
-                      <polyline points="18 15 12 9 6 15"></polyline>
-                    </svg>
-                    <span class="latin-num">+0.15%</span>
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="currency-cell">
-                    <img class="flag" src="https://flagcdn.com/w40/eu.png" alt="علم الاتحاد الأوروبي">
-                    <div class="curr-info">
-                      <span class="curr-code">EUR</span>
-                      <span class="curr-name">يورو أوروبي</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="latin-num">7.36</span> د.ل</td>
-                <td><span class="latin-num">7.42</span> د.ل</td>
-                <td>
-                  <span class="rate-trend trend-up">
-                    <svg class="trend-icon" viewBox="0 0 24 24">
-                      <polyline points="18 15 12 9 6 15"></polyline>
-                    </svg>
-                    <span class="latin-num">+0.08%</span>
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="currency-cell">
-                    <img class="flag" src="https://flagcdn.com/w40/eg.png" alt="علم مصر">
-                    <div class="curr-info">
-                      <span class="curr-code">EGP</span>
-                      <span class="curr-name">جنيه مصري</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="latin-num">0.141</span> د.ل</td>
-                <td><span class="latin-num">0.145</span> د.ل</td>
-                <td>
-                  <span class="rate-trend trend-down">
-                    <svg class="trend-icon" viewBox="0 0 24 24">
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                    <span class="latin-num">-0.22%</span>
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="currency-cell">
-                    <img class="flag" src="https://flagcdn.com/w40/tn.png" alt="علم تونس">
-                    <div class="curr-info">
-                      <span class="curr-code">TND</span>
-                      <span class="curr-name">دينار تونسي</span>
-                    </div>
-                  </div>
-                </td>
-                <td><span class="latin-num">2.14</span> د.ل</td>
-                <td><span class="latin-num">2.18</span> د.ل</td>
-                <td>
-                  <span class="rate-trend trend-down">
-                    <svg class="trend-icon" viewBox="0 0 24 24">
-                      <polyline points="6 9 12 15 18 9"></polyline>
-                    </svg>
-                    <span class="latin-num">-0.11%</span>
-                  </span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </article>
-
-      <!-- Interactive Currency Converter -->
-      <article class="panel animate-fade-in-up" style="animation-delay: 300ms;">
-        <div class="panel-title">
-          <h3>محول العملات الذكي</h3>
-          <span>حساب فوري شامل العمولة</span>
-        </div>
-        <div class="converter-form">
-          <!-- From Currency Group -->
-          <div class="form-group">
-            <label for="convert-amount">المبلغ الأساسي</label>
-            <div class="input-container">
-              <input type="number" id="convert-amount" value="1000" min="1" step="any" placeholder="أدخل القيمة هنا">
-              <select class="currency-select" id="from-currency" aria-label="من العملة">
-                <option value="LYD" selected>LYD - د.ل</option>
-                <option value="USD">USD - $</option>
-                <option value="EUR">EUR - €</option>
-                <option value="EGP">EGP - ج.م</option>
-                <option value="TND">TND - د.ت</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Switch Button -->
-          <div class="switch-btn-container">
-            <button class="switch-btn" id="switch-currencies" aria-label="عكس العملات">
-              <svg viewBox="0 0 24 24">
-                <polyline points="17 1 21 5 17 9"></polyline>
-                <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
-                <polyline points="7 23 3 19 7 15"></polyline>
-                <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
-              </svg>
-            </button>
-          </div>
-
-          <!-- To Currency Group -->
-          <div class="form-group">
-            <label for="to-currency">إلى العملة</label>
-            <div class="input-container">
-              <select class="form-input" id="to-currency" style="padding-left: 16px;" aria-label="إلى العملة">
-                <option value="LYD">LYD - دينار ليبي</option>
-                <option value="USD" selected>USD - دولار أمريكي</option>
-                <option value="EUR">EUR - يورو أوروبي</option>
-                <option value="EGP">EGP - جنيه مصري</option>
-                <option value="TND">TND - دينار تونسي</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Result Panel -->
-          <div class="conversion-result" id="result-section">
-            <div class="result-main">
-              <span>القيمة التقديرية:</span>
-              <span class="latin-num" id="result-value">0.00 USD</span>
-            </div>
-            <div class="result-details">
-              <div class="detail-row">
-                <span>سعر الصرف المرجعي:</span>
-                <span class="latin-num" id="rate-detail">-</span>
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-info">
+          <span class="section-tag">من نحن</span>
+          <h2 class="section-title">صناعة وطنية تعتمد على الابتكار والنقاء</h2>
+          <p>
+            تأسست شركة <strong>وادي الكوف الجديد</strong> في مدينة المرج بالمنطقة الصناعية بليبيا لتلبي التطلعات المتزايدة للحصول على حلول تنظيف وتعقيم متطورة وآمنة صحياً. نحن لسنا مجرد مصنع للمنظفات، بل نحن خبراء في صياغة الجودة، حيث نستورد المواد الخام من رواد الصناعة الكيميائية حول العالم.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="hl-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
               </div>
-              <div class="detail-row">
-                <span>عمولة الصرافة:</span>
-                <span class="latin-num" id="commission-detail">-</span>
+              <div>
+                <h4>مواد خام مستوردة</h4>
+                <p>ننتقي خاماتنا من أفضل المصادر العالمية لضمان فاعلية كيميائية تامة وأمان صحي كامل.</p>
               </div>
-              <div class="detail-row" style="font-weight: 700; color: var(--text-primary);">
-                <span>المجموع النهائي المقدر:</span>
-                <span class="latin-num" id="total-with-comm-detail">-</span>
+            </div>
+            <div class="highlight-item">
+              <div class="hl-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h4>معايير جودة صارمة</h4>
+                <p>تخضع جميع خطوط إنتاجنا لاختبارات معملية دقيقة للتأكد من مطابقتها للمواصفات الصحية والبيئية.</p>
               </div>
             </div>
           </div>
         </div>
-      </article>
-
+        
+        <div class="about-stats-panel">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">مواد آمنة صحياً</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">عالمي</span>
+              <span class="stat-label">استيراد أفضل الخامات</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">المرج</span>
+              <span class="stat-label">المنطقة الصناعية - ليبيا</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">فعال</span>
+              <span class="stat-label">حماية وتعقيم متكامل</span>
+            </div>
+          </div>
+          <div class="about-quote">
+            <p>"نلتزم بتقديم منتج ليبي يضاهي الماركات العالمية، لنكون شريكك الدائم في كل منزل ومنشأة."</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Business Features Section -->
-  <section class="features-section">
+  <!-- Products Section (Product Showcase) -->
+  <section class="products-section" id="products">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">لماذا صرافة وادي الكوف؟</h2>
-        <p class="section-desc">نهتم بأدق التفاصيل لتقديم تجربة مصرفية محلية استثنائية في المرج</p>
+        <span class="section-tag">منتجاتنا الأساسية</span>
+        <h2 class="section-title">حلول تنظيف يومية فائقة الفعالية</h2>
+        <p class="section-desc">مجموعة متكاملة من المنظفات المصنعة بتركيبة متطورة توفر نظافة تامة وأماناً لأسرتك</p>
       </div>
 
-      <div class="features-grid">
-        <!-- Feature 1 -->
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+      <!-- Dishwash Featured Layout (Showcasing the user provided Dexan image) -->
+      <div class="dishwash-featured-row">
+        <div class="elegant-image-border">
+          <img src="assets/dishwash-dexan.jpg" alt="سائل غسيل الأواني Dexan بالليمون الأخضر" class="dishwash-featured-img">
+        </div>
+        <div class="dishwash-featured-info">
+          <span class="featured-badge">المنتج الأكثر طلباً</span>
+          <h3>سائل غسيل الأواني (Dexan)</h3>
+          <p class="featured-desc">
+            تركيبتنا المتطورة لسائل الأواني تتميز بدرجة عالية جداً من الإزالة السريعة للدهون الصعبة، بفضل تركيز المادة الفعالة المحسنة. ناعم على الأيدي وقوي جداً على الشحوم، ليعطي أوانيك لمعاناً براقاً ورائحة الليمون الأخضر المنعشة التي تدوم طويلاً.
+          </p>
+          <ul class="featured-specs">
+            <li><span class="spec-check">✓</span> كفاءة عالية وتوفير في الاستخدام.</li>
+            <li><span class="spec-check">✓</span> يقضي على الروائح المزعجة تماماً.</li>
+            <li><span class="spec-check">✓</span> تركيبة معملية متوازنة تحمي البشرة.</li>
+          </ul>
+          <button class="btn btn-primary open-product-modal" data-product="dishwash">عرض تفاصيل المنتج</button>
+        </div>
+      </div>
+
+      <!-- Grid of remaining core products -->
+      <div class="products-grid">
+        
+        <!-- Product 2: Laundry Liquid -->
+        <div class="product-card">
+          <div class="product-icon-container">
+            <!-- SVG: Clothes/Bubbles -->
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 24V50C12 52.2 13.8 54 16 54H48C50.2 54 52 52.2 52 50V24" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <path d="M16 16C16 13.8 17.8 12 20 12H44C46.2 12 48 13.8 48 16V24H16V16Z" fill="var(--color-primary-glow)" stroke="currentColor" stroke-width="3"/>
+              <circle cx="32" cy="38" r="8" stroke="currentColor" stroke-width="3"/>
+              <!-- bubbles -->
+              <circle cx="20" cy="24" r="3" fill="var(--color-accent)"/>
+              <circle cx="44" cy="28" r="2.5" fill="var(--color-accent)"/>
             </svg>
           </div>
-          <h3>أمان وحماية قصوى</h3>
-          <p>جميع معاملاتنا تتم بأعلى درجات الموثوقية والأمان التام لضمان استقرار وحماية أصولك المالية بالكامل.</p>
+          <div class="product-card-body">
+            <h3>سائل غسيل الملابس</h3>
+            <p>تركيبة مخصصة للتنظيف العميق للمنسوجات وإزالة أصعب البقع مع الحفاظ على الألوان وحماية أنسجة الملابس.</p>
+            <div class="product-tags">
+              <span class="p-tag">إزالة بقع عميقة</span>
+              <span class="p-tag">حماية الألوان</span>
+            </div>
+            <button class="btn btn-secondary card-action-btn open-product-modal" data-product="laundry">عرض التفاصيل</button>
+          </div>
         </div>
 
-        <!-- Feature 2 -->
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">
-            <svg viewBox="0 0 24 24">
-              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-              <polyline points="2 17 12 22 22 17"></polyline>
-              <polyline points="2 12 12 17 22 12"></polyline>
+        <!-- Product 3: Multi-purpose Liquid -->
+        <div class="product-card">
+          <div class="product-icon-container">
+            <!-- SVG: Multi purpose spray -->
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M28 20H40L38 12H30L28 20Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M34 12V6M30 6H38" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <path d="M24 20L20 28H44L40 20" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M22 28V54C22 56.2 23.8 58 26 58H38C40.2 58 42 56.2 42 54V28" fill="var(--color-primary-glow)" stroke="currentColor" stroke-width="3"/>
+              <!-- Spray lines -->
+              <path d="M48 16H54M50 22H56M46 10H50" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round"/>
             </svg>
           </div>
-          <h3>مؤسسة مرخصة بالمرج</h3>
-          <p>نعمل تحت رعاية قانونية وترخيص رسمي معتمد من مصرف ليبيا المركزي، مما يمنح معاملاتك شرعية كاملة واستقراراً.</p>
+          <div class="product-card-body">
+            <h3>سائل متعدد الأغراض</h3>
+            <p>الحل الشامل لتطهير وتلميع مختلف الأسطح والأرضيات والزجاج، يزيل الغبار والدهون بلمسة واحدة دون ترك أثر.</p>
+            <div class="product-tags">
+              <span class="p-tag">تنظيف شامل</span>
+              <span class="p-tag">لمعان فوري</span>
+            </div>
+            <button class="btn btn-secondary card-action-btn open-product-modal" data-product="multipurpose">عرض التفاصيل</button>
+          </div>
         </div>
 
-        <!-- Feature 3 -->
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">
-            <svg viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="10"></circle>
-              <polyline points="12 6 12 12 16 14"></polyline>
+        <!-- Product 4: Disinfectants & Fresheners -->
+        <div class="product-card">
+          <div class="product-icon-container">
+            <!-- SVG: Disinfectant/Shield/Freshness -->
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 8L48 14V30C48 42 38 52 32 56C26 52 16 42 16 30V14L32 8Z" fill="var(--color-primary-glow)" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+              <path d="M26 32L30 36L38 28" stroke="var(--color-accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
-          <h3>سرعة المعالجة الفورية</h3>
-          <p>احجز مبالغك النقدية عبر الإنترنت واستلمها من فرعنا الرئيسي بمدينة المرج في غضون دقائق معدودة دون تعقيد.</p>
+          <div class="product-card-body">
+            <h3>المطهرات والمعطرات</h3>
+            <p>مطهرات طبية عالية التركيز تقضي على الجراثيم بنسبة 99.9% مع روائح زكية وفواحة تدوم لأوقات طويلة في المكان.</p>
+            <div class="product-tags">
+              <span class="p-tag">تعقيم 99.9%</span>
+              <span class="p-tag">روائح منعشة</span>
+            </div>
+            <button class="btn btn-secondary card-action-btn open-product-modal" data-product="disinfectants">عرض التفاصيل</button>
+          </div>
         </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium & Strategic Products Section -->
+  <section class="premium-section">
+    <div class="container">
+      <div class="section-header text-white">
+        <span class="section-tag bg-mint text-dark">المنتجات الخاصة والاستراتيجية</span>
+        <h2 class="section-title text-white">قوة تعقيم صناعية قصوى لمواجهة الجراثيم</h2>
+        <p class="section-desc text-gray">منتجات تم تصنيعها بتركيزات كيميائية دقيقة لتأمين تعقيم شامل وحماية كاملة للمنشآت والمنازل</p>
+      </div>
+
+      <div class="premium-grid">
+        <!-- Premium Product 1: Clorox -->
+        <div class="premium-card">
+          <div class="premium-card-badge">تعقيم وتبييض فائق</div>
+          <div class="premium-card-content">
+            <div class="premium-icon-header">
+              <!-- SVG chemical atom / chlorine -->
+              <svg class="premium-svg-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="16" stroke="currentColor" stroke-width="3"/>
+                <circle cx="12" cy="18" r="6" fill="var(--color-accent)"/>
+                <circle cx="52" cy="18" r="6" fill="var(--color-accent)"/>
+                <circle cx="32" cy="52" r="6" fill="var(--color-accent)"/>
+                <line x1="18" y1="21" x2="26" y2="27" stroke="currentColor" stroke-width="2"/>
+                <line x1="46" y1="21" x2="38" y2="27" stroke="currentColor" stroke-width="2"/>
+                <line x1="32" y1="46" x2="32" y2="38" stroke="currentColor" stroke-width="2"/>
+              </svg>
+              <h3>مادة الكلوركس (المبيض والمعقم)</h3>
+            </div>
+            <p>
+              مبيض ومطهر قوي جداً بتركيبة كلور نشط مركز. مثالي لتبييض الملابس، تعقيم المرافق الصحية، والقضاء الفوري على الفيروسات والميكروبات على الأسطح الصلبة. خيارك الأمثل لحماية صحية شاملة.
+            </p>
+            <div class="premium-highlights-list">
+              <span class="ph-badge">✓ مبيض ناصع</span>
+              <span class="ph-badge">✓ قاتل للفيروسات</span>
+              <span class="ph-badge">✓ تركيز قياسي معتمد</span>
+            </div>
+            <button class="btn btn-secondary open-product-modal" data-product="clorox">المواصفات الكيميائية</button>
+          </div>
+        </div>
+
+        <!-- Premium Product 2: Potash (Showcasing the cleaner-dexan image) -->
+        <div class="premium-card highlighted-potash">
+          <div class="premium-card-badge bg-gold">قوة التعقيم الشامل والقضاء على الجراثيم</div>
+          <div class="elegant-image-border premium-border">
+            <img src="assets/cleaner-dexan.png" alt="مادة البوتاس المعقمة ومنظف وادي الكوف الجديد" class="premium-product-img">
+          </div>
+          <div class="premium-card-content">
+            <h3>مادة البوتاس (معقم الجراثيم الشامل)</h3>
+            <p>
+              تركيبتنا الخاصة بـ "البوتاس" تقدم أقصى مستويات إزالة الرطوبة والروائح الكريهة والقضاء التام على البيئة الحاضنة للجراثيم والفطريات. مصممة لتسليك المجاري وتطهير الأسطح شديدة الاتساخ وإعادتها لحالتها الصحية المعقمة تماماً.
+            </p>
+            <div class="premium-highlights-list">
+              <span class="ph-badge">✓ يزيل الروائح الكريهة</span>
+              <span class="ph-badge">✓ يذيب الدهون المستعصية</span>
+              <span class="ph-badge">✓ تعقيم عميق جداً</span>
+            </div>
+            <button class="btn btn-primary open-product-modal" data-product="potash">المواصفات والتحذيرات</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Orders / Sample Request Section -->
+  <section class="orders-section" id="orders">
+    <div class="container form-max-width">
+      <div class="section-header">
+        <span class="section-tag">الطلبات والعينات</span>
+        <h2 class="section-title">اطلب عيناتك أو سجل طلبية شراء</h2>
+        <p class="section-desc">نوفر لأصحاب المحلات التجارية وموزعي الجملة إمكانية الحصول على عينات مجانية لمعاينة الجودة قبل الشراء</p>
+      </div>
+
+      <div class="form-container-box">
+        <!-- Form Header Tab -->
+        <div class="form-tabs">
+          <button class="tab-btn active" id="tab-sample" onclick="setOrderType('sample')">طلب عينة مجانية</button>
+          <button class="tab-btn" id="tab-purchase" onclick="setOrderType('purchase')">طلب شراء بالجملة</button>
+        </div>
+
+        <form id="order-form" onsubmit="handleFormSubmit(event)">
+          <!-- Hidden Input for Order Type -->
+          <input type="hidden" id="order-type-val" value="طلب عينة مجانية">
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="order-name">الاسم بالكامل / اسم النشاط التجاري *</label>
+              <input type="text" id="order-name" required placeholder="مثال: محلات النور للمواد الغذائية">
+            </div>
+
+            <div class="form-group">
+              <label for="order-phone">رقم هاتف التواصل (واتساب) *</label>
+              <div class="phone-input-wrapper">
+                <input type="tel" id="order-phone" required class="latin-num" placeholder="09XXXXXXXX">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="order-city">المدينة / المنطقة التابع لها *</label>
+              <input type="text" id="order-city" required placeholder="مثال: المرج - وسط البلاد">
+            </div>
+
+            <div class="form-group">
+              <label for="order-product">المنتج المراد طلبه *</label>
+              <select id="order-product" required>
+                <option value="" disabled selected>اختر المنتج من القائمة</option>
+                <option value="سائل الأواني ديكسان">سائل الأواني ديكسان (إزالة دهون عالية)</option>
+                <option value="سائل الملابس">سائل غسيل الملابس (تنظيف عميق)</option>
+                <option value="سائل متعدد الأغراض">سائل متعدد الأغراض للأسطح</option>
+                <option value="المطهرات والمعطرات">المطهرات والمعطرات (جودة تعقيم فائقة)</option>
+                <option value="مادة الكلوركس المعقمة">مادة الكلوركس (المبيض والمعقم)</option>
+                <option value="مادة البوتاس">مادة البوتاس (تعقيم شامل وقاتل جراثيم)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group style-textarea">
+            <label for="order-notes">تفاصيل إضافية أو كميات مطلوبة</label>
+            <textarea id="order-notes" rows="4" placeholder="اكتب ملاحظاتك هنا (مثال: حجم العينات المطلوبة، أو الكمية التقريبية لشراء الجملة)"></textarea>
+          </div>
+
+          <div class="form-actions-row">
+            <button type="submit" class="btn btn-primary form-submit-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="form-btn-icon">
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path>
+              </svg>
+              <span>إرسال الطلب عبر الواتساب الفوري</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Location Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid-layout">
+        
+        <!-- Info Column -->
+        <div class="contact-details-panel">
+          <span class="section-tag">تواصل معنا</span>
+          <h2 class="section-title">موقع مصنعنا في المرج</h2>
+          <p class="contact-intro-desc">
+            نستورد أفضل المواد الخام عالمياً لنصنع لكم منظفات آمنة وفعالة. يقع مقرنا الرئيسي في المنطقة الصناعية بمدينة المرج، ونرحب بزيارة وكلائنا وتجار الجملة في أي وقت.
+          </p>
+
+          <div class="contact-info-list">
+            <!-- Address Item -->
+            <div class="contact-info-card">
+              <div class="cic-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="cic-text">
+                <span>المقر الرئيسي والمصنع</span>
+                <strong>المرج - المنطقة الصناعية - ليبيا</strong>
+              </div>
+            </div>
+
+            <!-- Phone Item -->
+            <div class="contact-info-card">
+              <div class="cic-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="cic-text">
+                <span>رقم الهاتف المباشر</span>
+                <strong><a href="tel:0924606780" class="latin-num text-hover-underline">0924606780</a></strong>
+              </div>
+            </div>
+
+            <!-- Coordinates Item -->
+            <div class="contact-info-card">
+              <div class="cic-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <div class="cic-text">
+                <span>إحداثيات الموقع الدقيقة لخرائط Google</span>
+                <div class="coordinate-copy-row">
+                  <span class="latin-num font-bold" id="coordinate-text">32°28'42.9"N 20°49'14.8"E</span>
+                  <button class="btn-copy" id="btn-copy-coords" aria-label="نسخ الإحداثيات">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="copy-icon">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span class="tooltiptext" id="copy-tooltip">نسخ الإحداثيات</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map Column -->
+        <div class="map-wrapper-box">
+          <div class="map-iframe-container">
+            <!-- Google Maps Embed for the exact coordinates 32.478583, 20.820778 -->
+            <iframe 
+              src="https://maps.google.com/maps?q=32.478583,20.820778&z=15&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade" 
+              title="موقع مصنع وادي الكوف الجديد في المرج">
+            </iframe>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=32.478583,20.820778" target="_blank" rel="noopener noreferrer" class="btn btn-secondary map-btn-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 18px;">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            <span>فتح في تطبيق خرائط Google</span>
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- Footer Section -->
-  <footer class="site-footer" id="contact-us">
-    <!-- SVG curved wave separator linking sections smoothly -->
-    <svg class="footer-wave" viewBox="0 0 1440 40" preserveAspectRatio="none">
-      <path d="M0,20 C320,40 480,0 720,20 C960,40 1120,0 1440,20 L1440,40 L0,40 Z"></path>
-    </svg>
-
+  <footer class="site-footer">
     <div class="container footer-grid">
       <!-- Info Column -->
       <div class="footer-logo">
         <a href="#" class="brand">
-          <svg class="logo-icon" viewBox="0 0 48 48">
-            <path d="M6 34C14 34 10 14 24 14C38 14 34 34 42 34" stroke="var(--color-primary)" />
-            <path d="M12 38C18 38 16 22 24 22C32 22 30 38 36 38" stroke="var(--color-accent)" />
-          </svg>
-          <span class="brand-name">صرافة وادي الكوف</span>
+          <div class="brand-logo-frame">
+            <img src="assets/logo.png" alt="شعار مصانع وادي الكوف الجديد ديكسان" class="logo-img-real">
+          </div>
+          <span class="brand-name">وادي الكوف الجديد</span>
         </a>
-        <p class="slogan">"وادي الكوف... حيث الاستقرار المالي يلتقي بجمال المرج"</p>
-        <div class="license-tag">
-          <svg viewBox="0 0 24 24">
-            <polyline points="9 11 12 14 22 4"></polyline>
-            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+        <p class="slogan">"نستورد أفضل المواد الخام عالمياً لنصنع لكم منظفات آمنة وفعالة"</p>
+        
+        <!-- Quality Seal Badge -->
+        <div class="quality-badge-wrapper">
+          <svg class="quality-seal" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="36" fill="var(--color-primary-glow)" stroke="var(--color-primary)" stroke-width="3" stroke-dasharray="6 3"/>
+            <circle cx="40" cy="40" r="28" fill="var(--color-primary)" stroke="var(--color-primary-hover)" stroke-width="2"/>
+            <path d="M28 42L36 50L52 32" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="50%" y="24" text-anchor="middle" fill="white" font-family="'Cairo'" font-size="8" font-weight="bold">ضمان الجودة</text>
+            <text x="50%" y="64" text-anchor="middle" fill="white" font-family="'Cairo'" font-size="7" font-weight="bold">والتعقيم 100%</text>
           </svg>
-          <span>مرخصة ومنظمة من مصرف ليبيا المركزي</span>
+          <div class="quality-text">
+            <strong>منظفات ليبية آمنة</strong>
+            <span>مصنعة وفقاً للضوابط المعملية القياسية</span>
+          </div>
         </div>
       </div>
 
@@ -396,43 +581,41 @@
       <div>
         <h4 class="footer-title">صفحات سريعة</h4>
         <ul class="footer-links">
-          <li><a href="#home">الرئيسية</a></li>
-          <li><a href="#rates-converter">أسعار الصرف المباشرة</a></li>
-          <li><a href="#rates-converter">محول العملات</a></li>
+          <li><a href="#">الرئيسية</a></li>
+          <li><a href="#about">عن الشركة</a></li>
+          <li><a href="#products">منتجاتنا</a></li>
+          <li><a href="#orders">طلب عينة / شراء جملة</a></li>
+          <li><a href="#contact">اتصل بنا</a></li>
         </ul>
       </div>
 
       <!-- Contacts Column -->
       <div>
-        <h4 class="footer-title">تواصل معنا</h4>
+        <h4 class="footer-title">معلومات الاتصال</h4>
         <div class="footer-contact-list">
           <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            <p>الفرع الرئيسي: وسط البلاد - مدينة المرج - ليبيا</p>
+            <p>المصنع: المرج - المنطقة الصناعية - ليبيا</p>
           </div>
           <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
             </svg>
-            <p class="latin-num"><a href="tel:+218925555555" style="color: inherit; text-decoration: none;">+218 92 555 5555</a></p>
+            <p class="latin-num"><a href="tel:0924606780" style="color: inherit; text-decoration: none;">0924606780</a></p>
           </div>
+          
           <div class="social-links">
-            <a href="#" class="social-btn" aria-label="حساب فيسبوك">
-              <svg viewBox="0 0 24 24">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            <a href="https://wa.me/218924606780" class="social-btn wa-color" aria-label="حساب واتساب" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.717-1.464L0 24zm6.59-4.846c1.6.95 3.197 1.451 4.886 1.451 5.393 0 9.778-4.383 9.781-9.774 0-2.612-1.017-5.07-2.868-6.923C16.594 2.054 14.132 1.034 11.521 1.03c-5.405 0-9.79 4.385-9.793 9.777-.001 1.77.474 3.498 1.378 5.01L2.122 21.9l6.525-1.746z"/>
               </svg>
             </a>
-            <a href="#" class="social-btn" aria-label="حساب تويتر">
-              <svg viewBox="0 0 24 24">
-                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-              </svg>
-            </a>
-            <a href="#" class="social-btn" aria-label="حساب تليغرام">
-              <svg viewBox="0 0 24 24">
-                <path d="M21.13 2.92a.5.5 0 0 0-.49-.07L2.1 9.38a.5.5 0 0 0-.05.91l5.3 2.1 2.1 6.8a.5.5 0 0 0 .91.07l2.8-3.9 4.9 3.6a.5.5 0 0 0 .8-.25l3.9-15.3a.5.5 0 0 0-.77-.49z"></path>
+            <a href="https://www.facebook.com/share/1JbN2DsXer/" class="social-btn fb-color" target="_blank" rel="noopener noreferrer" aria-label="حساب فيسبوك">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14 13.5h2.5l1-3H14V8.5c0-.7.2-1 1-1h1.5v-3H14c-2.5 0-4 1.2-4 3.5v2.5H8v3h2V20h4v-6.5z"/>
               </svg>
             </a>
           </div>
@@ -442,10 +625,37 @@
 
     <!-- Footer Copyright -->
     <div class="container footer-bottom">
-      <p>© <span class="latin-num">2026</span> صرافة وادي الكوف. جميع الحقوق محفوظة.</p>
-      <p>تصميم وتطوير بواسطة وادي الكوف للحلول البرمجية.</p>
+      <p>© <span class="latin-num">2026</span> شركة وادي الكوف الجديد لصناعة المنظفات. جميع الحقوق محفوظة.</p>
+      <p>صنع بكل فخر في المرج - ليبيا.</p>
     </div>
   </footer>
+
+  <!-- Product Details Modal (Popup Dialog) -->
+  <div class="product-modal-overlay" id="product-modal">
+    <div class="product-modal-content">
+      <button class="close-modal-btn" id="close-modal" aria-label="إغلاق النافذة">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      
+      <div id="modal-body-content">
+        <!-- Dynamic content injected by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toast-notify">تم نسخ الإحداثيات بنجاح!</div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/218924606780" class="floating-whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="تواصل معنا عبر واتساب">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.504-5.717-1.464L0 24zm6.59-4.846c1.6.95 3.197 1.451 4.886 1.451 5.393 0 9.778-4.383 9.781-9.774 0-2.612-1.017-5.07-2.868-6.923C16.594 2.054 14.132 1.034 11.521 1.03c-5.405 0-9.79 4.385-9.793 9.777-.001 1.77.474 3.498 1.378 5.01L2.122 21.9l6.525-1.746z"/>
+    </svg>
+    <span class="wa-floating-tooltip">راسلنا على واتساب</span>
+  </a>
 
   <!-- Script Files -->
   <script src="script.js"></script>
