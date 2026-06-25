@@ -434,6 +434,14 @@ body.dark-mode .sun-icon { display: block; }
   color: var(--text-tertiary);
 }
 
+/* --- Responsive Table Wrapper --- */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 12px;
+}
+
 /* --- Rates Table --- */
 .rates-table {
   width: 100%;
@@ -538,6 +546,7 @@ body.dark-mode .sun-icon { display: block; }
 .input-container input {
   width: 100%;
   padding: 14px 16px;
+  padding-left: 110px; /* Make space for absolute currency-select on the left */
   border-radius: var(--radius-md);
   border: 1px solid var(--border-color);
   background-color: var(--bg-secondary);
@@ -678,7 +687,7 @@ body.dark-mode .sun-icon { display: block; }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 28px;
 }
 
@@ -873,13 +882,14 @@ body.dark-mode select.form-input {
   padding: 80px 0 30px;
   border-top: 1px solid var(--border-color);
   position: relative;
+  overflow: hidden; /* Prevent wave SVG or items from leaking horizontally */
 }
 
 .footer-wave {
   position: absolute;
   top: -40px;
   left: 0;
-  right: 0;
+  width: 100%;
   height: 40px;
   fill: var(--bg-secondary);
 }
@@ -1157,6 +1167,10 @@ body.dark-mode select.form-input {
 }
 
 @media (max-width: 767px) {
+  .container {
+    padding: 0 16px;
+  }
+
   .header-actions .phone-link {
     display: none;
   }
@@ -1187,6 +1201,64 @@ body.dark-mode select.form-input {
   }
   
   .panel {
+    padding: 16px;
+  }
+
+  .rates-table th,
+  .rates-table td {
+    padding: 12px 8px;
+  }
+
+  .currency-cell {
+    gap: 8px;
+  }
+
+  .flag {
+    width: 28px;
+    height: 18px;
+  }
+
+  .order-form-panel {
     padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+  
+  .panel {
+    padding: 12px;
+  }
+
+  .order-form-panel {
+    padding: 16px;
+  }
+
+  .header-actions {
+    gap: 12px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-name {
+    font-size: 1.1rem;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .curr-name {
+    display: none;
+  }
+
+  .rates-table th,
+  .rates-table td {
+    padding: 10px 6px;
   }
 }
