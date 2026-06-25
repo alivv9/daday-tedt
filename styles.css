@@ -137,12 +137,49 @@ body {
 }
 
 /* Brand & Logo Styles */
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .brand {
   display: flex;
   align-items: center;
   gap: 12px;
   text-decoration: none;
   color: var(--text-primary);
+}
+
+.phone-link-header-direct {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.phone-link-header-direct:hover {
+  color: var(--color-accent);
+}
+
+.phone-icon-direct {
+  width: 18px;
+  height: 18px;
+  color: var(--color-accent);
+}
+
+/* Hide direct phone link next to logo on mobile screens */
+@media (max-width: 992px) {
+  .phone-link-header-direct {
+    display: none;
+  }
+  .brand-wrapper {
+    gap: 0;
+  }
 }
 
 .brand-logo-frame {
@@ -293,6 +330,18 @@ body.dark-mode .brand:hover .brand-logo-frame {
 .whatsapp-header-link svg {
   width: 22px;
   height: 22px;
+}
+
+.header-cta-btn {
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  border-width: 1.5px;
+}
+
+@media (max-width: 576px) {
+  .header-cta-btn {
+    display: none;
+  }
 }
 
 .phone-link {
@@ -488,6 +537,20 @@ body.dark-mode .sun-icon { display: block; }
 .btn-secondary:hover {
   background-color: var(--color-primary-glow);
   transform: translateY(-2px);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-accent:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px var(--color-accent-glow);
 }
 
 /* --- Hero Section --- */
@@ -2133,4 +2196,117 @@ body.dark-mode .modal-spec-block h4 {
     opacity: 0;
   }
 }
+
+/* --- Why Choose Us Section --- */
+.why-us-section {
+  padding: 100px 0;
+  background-color: var(--bg-secondary);
+  border-bottom: 2px solid var(--border-color);
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.why-us-card {
+  grid-column: span 2;
+  background-color: var(--bg-primary);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-us-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--color-accent);
+  transition: background-color 0.3s ease;
+}
+
+.why-us-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.why-us-card:hover::before {
+  background-color: var(--color-primary);
+}
+
+.why-us-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-accent-glow);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.why-us-card:hover .why-us-icon {
+  background-color: var(--color-primary-glow);
+  color: var(--color-primary);
+}
+
+.why-us-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.why-us-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.why-us-card p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Layout Balancing for Grid Items */
+@media (min-width: 992px) {
+  .why-us-grid .why-us-card:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+  .why-us-grid .why-us-card:nth-child(5) {
+    grid-column: 4 / span 2;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .why-us-card {
+    grid-column: span 3 !important;
+  }
+  .why-us-grid .why-us-card:nth-child(5) {
+    grid-column: span 6 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .why-us-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .why-us-card {
+    grid-column: span 6 !important;
+    padding: 24px;
+  }
 }
