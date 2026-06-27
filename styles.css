@@ -12,13 +12,13 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
   font-family: 'Tajawal', 'Cairo', sans-serif;
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   transition: background-color 0.4s ease, color 0.4s ease;
   background-color: var(--bg-primary);
   color: var(--text-primary);
@@ -210,6 +210,7 @@ body.dark-mode .brand-logo-frame {
   letter-spacing: -0.5px;
   color: var(--text-primary);
   line-height: 1.1;
+  white-space: nowrap;
 }
 
 .brand-subtitle {
@@ -217,6 +218,7 @@ body.dark-mode .brand-logo-frame {
   color: var(--color-accent);
   font-weight: 700;
   margin-top: 4px;
+  white-space: nowrap;
 }
 
 /* Direct contact phone number next to logo */
@@ -1983,8 +1985,8 @@ body.dark-mode .moon-icon {
   }
 }
 
-/* For Tablets (768px to 1024px) */
-@media (max-width: 1024px) {
+/* For Tablets and Medium Viewports (768px to 1150px) */
+@media (max-width: 1150px) {
   .desktop-nav {
     display: none; /* Hide desktop menu */
   }
